@@ -4,17 +4,15 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-gray-200 py-2.5 rounded dark:bg-gray-800 drop-shadow-sm">
-      <div className="container flex flex-wrap justify-between items-center mx-auto px-2 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-0">
+    <nav className="navbar">
+      <div className="navbar-content">
         <a href="#" className="flex items-center">
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Torvald
-          </span>
+          <span className="navbar-title">Torvald</span>
         </a>
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="mobile-menu"
           aria-expanded="false"
           onClick={() => setIsOpen(!isOpen)}
@@ -49,29 +47,23 @@ export const Navbar = () => {
           className={`w-full md:block md:w-auto ${isOpen ? "block" : "hidden"}`}
           id="mobile-menu"
         >
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-6 md:mt-0 md:text-sm md:font-medium">
+          <ul className="navbar-items-list">
             <li>
               <a
                 href="#"
-                className="block py-2 pr-4 pl-3 text-white bg-red-700 rounded md:bg-transparent md:text-red-700 md:p-0 dark:text-white"
+                className="navbar-item navbar-item-active"
                 aria-current="page"
               >
                 Accueil
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
+              <a href="#" className="navbar-item">
                 Articles
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
+              <a href="#" className="navbar-item">
                 Portfolio
               </a>
             </li>
@@ -80,7 +72,7 @@ export const Navbar = () => {
               <a
                 href="https://twitter.com/Torvald26"
                 target="_blank"
-                className="block text-gray-700 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="navbar-item"
                 rel="noreferrer"
               >
                 <span className="sr-only">Twitter</span>
@@ -98,7 +90,7 @@ export const Navbar = () => {
               <a
                 href="https://www.youtube.com/c/minequent"
                 target="_blank"
-                className="block text-gray-700 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="navbar-item"
                 rel="noreferrer"
               >
                 <span className="sr-only">YouTube</span>
@@ -116,7 +108,7 @@ export const Navbar = () => {
               <a
                 href="https://github.com/Torvaldi"
                 target="_blank"
-                className="block text-gray-700 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="navbar-item"
                 rel="noreferrer"
               >
                 <span className="sr-only">Github</span>
